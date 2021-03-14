@@ -1,0 +1,68 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+
+.day {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: flex-end;
+  border: 1px solid gray;
+  background-color: white;
+  margin: 0 15px 12px 15px;
+  border-radius: 11px;
+  flex-direction: column;
+  font-size: 3.5vw;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.day input {
+  border-radius: 5px;
+  border: 1px solid gray;
+  font-size: 3.2vw;
+}
+
+.date-track {
+  display: flex;
+  margin: 8px 0 8px 7px;
+  justify-content: center;
+}
+
+.date-div,
+.page_no-div {
+  display: flex;
+  align-items: center;
+}
+
+.date-div {
+  margin-right: 8px;
+}
+
+.date-div input,
+.page_no-div input {
+  width: 32vw;
+  font-size: 3.2vw;
+  font-family: 'Roboto', sans-serif;
+  padding: 6px;
+}
+
+.page_no-div input {
+  width: 9vw;
+}
+
+.day-buttons {
+  justify-content: center;
+}
+
+.day-buttons button {
+  font-size: 3.5vw;
+  width: 23vw;
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: block;
+  cursor: pointer;
+}

@@ -1,0 +1,110 @@
+@import "https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+
+.main {
+  padding-bottom: 10vh;
+  font-family: 'Roboto', sans-serif;
+  overflow-y: scroll;
+}
+
+.main h3 {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 4.5vw;
+}
+
+.add-book {
+  font-size: 11vw;
+  color: white;
+  position: absolute;
+  right: 11px;
+  top: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.books {
+  margin-top: 12px;
+}
+
+.one-book {
+  display: flex;
+  justify-content: flex-end;
+  border: 1px solid rgb(218, 213, 213);
+  background-color: white;
+  margin: 0 15px 12px 15px;
+  border-radius: 11px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.one-book .buttons {
+  align-self: flex-end;
+  margin-top: 4px;
+}
+
+.one-book .buttons button {
+  border: none;
+  background: none;
+  font-size: 5vw;
+  padding: 0 6px;
+  cursor: pointer;
+}
+
+.fa-trash-o {
+  color: red;
+}
+
+.fa-pencil-square-o {
+  color: black;
+}
+
+.one-book:hover {
+  background-color: rgb(207, 240, 187, 0.7);
+}
+
+.one-book .book-info {
+  width: 100%;
+  font-size: 4vw;
+  margin-bottom: 12px;
+}
+
+.one-book .book-info a {
+  color: black;
+  text-decoration: none;
+}
+
+.one-book .book-info a div {
+  display:flex;
+}
+
+.one-book .book-info p {
+  margin: 2px 0;
+}
+
+.book-name {
+  font-weight: bold;
+  align-items: center;
+  width: 33%;
+  justify-content: flex-start;
+}
+
+.book-description {
+  width:70%;
+  align-items: flex-start;
+}
+
+.one-book .book-info .book-name,
+.one-book .book-info .book-description {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.tracking {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 150px;
+}
