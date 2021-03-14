@@ -16,8 +16,10 @@ export default function bookReducer(state = [], action) {
       objIndex = state.findIndex(obj => obj.id === action.payload.id);
       updateObj = {
         ...state[objIndex],
-        description: action.payload.description,
         name: action.payload.name,
+        author: action.payload.author,
+        genre: action.payload.genre,
+        pages: action.payload.pages,
       };
       updatedState = [
         ...state.slice(0, objIndex),

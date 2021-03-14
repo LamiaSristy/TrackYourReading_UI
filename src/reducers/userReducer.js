@@ -61,7 +61,7 @@ const userReducer = (state = initialState, action) => {
       return {
         isLogin: false,
         user: {},
-        illness: {},
+        books: {},
       };
 
     default: return state;

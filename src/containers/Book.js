@@ -3,10 +3,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import FormBook from '../../components/FormBook';
-import { fetchUserBook, createBook, deleteBook } from '../../actions/book';
-import { loginStatus } from '../../actions/user';
-import './book.css';
+import FormBook from '../components/FormBook';
+import { fetchUserBook, createBook, deleteBook } from '../actions/book';
+import { loginStatus } from '../actions/user';
+import '../stylesheets/Book.css';
 
 class Book extends React.Component {
   constructor(props) {

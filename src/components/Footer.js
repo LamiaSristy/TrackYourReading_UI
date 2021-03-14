@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
-import './Footer.css';
-import PathComponent from '../PathComponent';
-import { logOutUser } from '../../actions/user';
+import PathComponent from './PathComponent';
+import { logOutUser } from '../actions/user';
+import '../stylesheets/Footer.css';
 
 const Footer = ({
   isLogin, logOut, history, displayForm, match,

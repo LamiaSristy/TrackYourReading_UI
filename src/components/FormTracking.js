@@ -2,8 +2,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import './FormDay.css';
-import { updateDay } from '../../actions/trackings';
+import { updateDay } from '../actions/trackings';
+import '../stylesheets/FormTracking.css';
 
 class FormDay extends React.Component {
   constructor(props) {

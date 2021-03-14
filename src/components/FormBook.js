@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './FormBook.css';
+import '../stylesheets/FormBook.css';
 import { connect } from 'react-redux';
-import { updateBook } from '../../actions/book';
+import { updateBook } from '../actions/book';
 
 class FormBook extends React.Component {
   constructor(props) {
@@ -102,10 +102,9 @@ class FormBook extends React.Component {
               Name:
               <input
                 required
-                id="name"
-                type="text"
+                id="name"                
                 name="name"
-                defaultValue={buttonId === '0' ? name : books[0].name}
+                defaultValue={buttonId === '0' ? name : book[0].name}
                 onChange={this.handleChangeName}
               />
             </label>
@@ -116,7 +115,7 @@ class FormBook extends React.Component {
               <textarea
                 id="author"
                 name="author"
-                defaultValue={buttonId === '0' ? author : books[0].author}
+                defaultValue={buttonId === '0' ? author : book[0].author}
                 onChange={this.handleChangeAuthor}
               />
             </label>
@@ -128,7 +127,7 @@ class FormBook extends React.Component {
               <textarea
                 id="genre"
                 name="genre"
-                defaultValue={buttonId === '0' ? genre : books[0].genre}
+                defaultValue={buttonId === '0' ? genre : book[0].genre}
                 onChange={this.handleChangeGenre}
               />
             </label>
@@ -185,7 +184,7 @@ FormBook.defaultProps = {
 
 const mapStateToProps = state => ({
   user: state.user,
-  books: state.books,
+  books: state.book,
 });
 const mapDispatchToProps = dispatch => ({
   updateBook: data => dispatch(updateBook(data)),

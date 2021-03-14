@@ -4,10 +4,10 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
-import { fetchReadingDays, createDay, deleteDay } from '../../actions/trackings';
-import { loginStatus } from '../../actions/user';
-import FormDay from '../../components/FormDay';
-import './Trackings.css';
+import { fetchReadingDays, createDay, deleteDay } from '../actions/trackings';
+import { loginStatus } from '../actions/user';
+import FormTracking from '../components/FormTracking';
+import '../stylesheets/Trackings.css';
 
 class Trackings extends React.Component {
   constructor(props) {
@@ -149,7 +149,7 @@ class Trackings extends React.Component {
               </div>
             )}
             {addEdit && buttonId === day.id.toString() && (
-            <FormDay
+            <FormTracking
               actionToPerform="Save Changes"
               buttonId={buttonId}
               changeEditForm={this.changeEditForm}
@@ -157,7 +157,7 @@ class Trackings extends React.Component {
             )}
           </div>
         ))}
-        {addForm && <FormDay actionToPerform="Add" addTracking={this.addTracking} changeAddForm={this.changeAddForm} /> }
+        {addForm && <FormTracking actionToPerform="Add" addTracking={this.addTracking} changeAddForm={this.changeAddForm} /> }
       </div>
 
     );

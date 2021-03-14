@@ -6,15 +6,15 @@ import {
   Route,
 } from 'react-router-dom';
 import { connect } from 'react-redux';
-import gandalf from './img/gandalf.png';
-import Header from '../Header';
-import Login from '../../containers/Login';
-import Signup from '../../containers/Signup';
-import Book from '../../containers/book';
-import Trackings from '../../containers/Trackings';
-import Footer from '../Footer';
-import { loginStatus } from '../../actions/user';
-import './App.css';
+import gandalf from '../assets/img/gandalf.png';
+import Header from './Header.js';
+import Login from '../containers/Login';
+import Signup from '../containers/Signup';
+import Book from '../containers/Book';
+import Trackings from '../containers/Trackings';
+import Footer from './Footer';
+import { loginStatus } from '../actions/user';
+import '../stylesheets/App.css';
 
 class App extends React.Component {
   constructor() {
