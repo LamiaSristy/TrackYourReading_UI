@@ -28,16 +28,29 @@ const userReducer = (state = initialState, action) => {
         isLogin: false,
         user: {},
       };
-    case CREATE_USER:
-      return {
-        isLogin: true,
-        user: {
-          id: action.payload.id,
-          username: action.payload.username,
-          password: action.payload.password,
-          passwordConfirmation: action.payload.passwordConfirmation,
-        },
-      };
+
+      case CREATE_USER:
+        const newState = {
+          isLogin: true,
+          user: {
+            id: action.payload.id,
+            username: action.payload.username,
+            password: action.payload.password,
+            passwordConfirmation: action.payload.passwordConfirmation,
+          },
+        };
+        localStorage.setItem('userState', JSON.stringify(newState));
+        return newState;
+    // case CREATE_USER:
+    //   return {
+    //     isLogin: true,
+    //     user: {
+    //       id: action.payload.id,
+    //       username: action.payload.username,
+    //       password: action.payload.password,
+    //       passwordConfirmation: action.payload.passwordConfirmation,
+    //     },
+    //   };
     case CREATE_USER_ERROR:
       return {
         isLogin: false,

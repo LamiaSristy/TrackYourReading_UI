@@ -15,7 +15,7 @@ export const logOutUserUrl = `${baseUrl}/logout`;
 
 // Book table's endpoints:
 
-export const fetchUserBookUrl = user_id => `${baseUrl}/users/${user_id}/books`
+export const fetchUserBookUrl = user_id => `${baseUrl}/users/${user_id}/books`;
 
 export const createBookUrl = user_id => `${baseUrl}/users/${user_id}/books`;
 
