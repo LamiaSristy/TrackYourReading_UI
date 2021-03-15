@@ -73,7 +73,7 @@ class Signup extends Component {
          <div className="errors-div">
            {errors ? this.handleErrors() : null}
          </div>
-         <h2>Sign Up</h2>
+         <h2>Sign Up with Username and password!!</h2>
          <form onSubmit={this.handleSubmit}>
            <input
              placeholder="Username"
@@ -100,7 +100,7 @@ class Signup extends Component {
              required
            />
            <button placeholder="submit" type="submit">
-             Sign In
+             Sign Up
            </button>
          </form>
        </section>
