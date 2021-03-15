@@ -89,7 +89,7 @@ class Book extends React.Component {
        <main className="main">
          <button type="button" className="add-book" onClick={this.displayForm}>+</button>
          <div className="books">
-           { !editForm && !addForm && <h3>Your Books</h3>}
+           { !editForm && !addForm && <h3> All your Books</h3>}
 
            {book.length === 0 && !addForm && <div className="tracking">Start adding a book you want to track here!</div>}
            {book.map(book => (
@@ -117,8 +117,8 @@ class Book extends React.Component {
                        <div className="book-name">
                          <p>Name:</p>
                          <p>Author:</p>
-                         <p>Genre</p>
-                         <p>No. of pages</p>
+                         <p>Genre:</p>
+                         <p>Pages:</p>
                        </div>
                        <div className="book-description">
                          <p>{book.name}</p>

@@ -4,7 +4,7 @@ import '../stylesheets/Header.css';
 const Header = () => (
   <header>
     <div className="title">
-      <h4>TrackYourReading</h4>
+      <p>Reading-Tracker</p>
     </div>
   </header>
 );

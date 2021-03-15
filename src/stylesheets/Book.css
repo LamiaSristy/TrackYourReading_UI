@@ -19,7 +19,7 @@ h3 {
 }
 
 .add-book {
-  font-size: 11vw;
+  font-size: 5vw;
   color: white;
   position: absolute;
   right: 11px;
@@ -36,10 +36,10 @@ h3 {
 .one-book {
   display: flex;
   justify-content: flex-end;
-  border: 1px solid rgb(218, 213, 213);
+  border: 1px dotted #721c24;
+  border-radius: 5px;
   background-color: white;
   margin: 0 15px 12px 15px;
-  border-radius: 11px;
   flex-direction: column;
   align-items: center;
 }

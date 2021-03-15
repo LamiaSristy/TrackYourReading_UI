@@ -6,7 +6,7 @@ import {
   Route,
 } from 'react-router-dom';
 import { connect } from 'react-redux';
-import gandalf from '../assets/img/sign_in.png';
+import img_block from '../assets/img/sign_in.png';
 import Header from './Header.js';
 import Login from '../containers/Login';
 import Signup from '../containers/Signup';
@@ -82,7 +82,7 @@ class App extends React.Component {
                   : (
                     <div className="login-access">
                       <p>You need to Sign In to access here</p>
-                      <img src={gandalf} alt="gandalf" />
+                      <img src={img_block} alt="img_block" />
                     </div>
                   )
               )}
@@ -101,7 +101,7 @@ class App extends React.Component {
                   : (
                     <div className="login-access">
                       <p>You need to login to access here</p>
-                      <img src={gandalf} alt="gandalf" />
+                      <img src={img_block} alt="img_block" />
                     </div>
                   )
               )}

@@ -5,11 +5,12 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.trackings h3 {
+.trackings p {
   font-family: 'Raleway', sans-serif;
   text-align: center;
-  font-size: 5.5vw;
+  /* font-size: 5.5vw; */
   margin: 10px;
+  margin-bottom: 20px;
 }
 
 .trackings-buttons {
@@ -30,13 +31,13 @@
 }
 
 .add-day {
-  font-size: 12vw;
+  font-size: 5vw;
   cursor: pointer;
   padding-right: 10px;
 }
 
 .go-back {
-  font-size: 6.8vw;
+  font-size: 5vw;
   cursor: pointer;
   padding-left: 10px;
 }

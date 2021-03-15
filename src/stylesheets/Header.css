@@ -4,8 +4,7 @@ header {
   flex-shrink: 0;
   display: flex;
   background: #164663;
-  font-family: 'Poppins', sans-serif;
-  color: white;
+  font-family: 'Poppins', sans-serif;  
   align-items: center;
   justify-content: center;
 }
@@ -13,9 +12,10 @@ header {
 .title {
   text-align: center;
   letter-spacing: 0.6px;
-  font-size: 6vw;
+  font-size: 5vw;
 }
 
-.title h4 {
+.title p {
   margin: 10px;
+  color: white;
 }

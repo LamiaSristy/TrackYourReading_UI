@@ -123,7 +123,7 @@ class FormBook extends React.Component {
 
           <div className="one-parameter">
             <label htmlFor="genre">
-              genre
+              Genre:
               <textarea
                 id="genre"
                 name="genre"
@@ -134,7 +134,7 @@ class FormBook extends React.Component {
           </div>
           <div className="one-parameter">
             <label htmlFor="pages">
-              No of pages:
+              Pages:
               <textarea
                 id="pages"
                 name="pages"

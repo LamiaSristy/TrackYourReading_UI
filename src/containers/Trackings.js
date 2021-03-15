@@ -110,16 +110,18 @@ class Trackings extends React.Component {
         <div className="trackings-buttons">
           <button type="button" className="go-back" onClick={this.displayInfo}>
             <Link to="/main">
-              <i className="fa fa-arrow-left" aria-hidden="true" />
+              <i className="fa fa-arrow-circle-left" aria-hidden="true" />
             </Link>
           </button>
-          <button type="button" className="add-day" onClick={this.displayInfo}>+</button>
+          <button type="button" className="add-day" onClick={this.displayInfo}>
+            <i className="fa fa-plus-circle" aria-hidden="true" />
+          </button>
         </div>
         {!addEdit && !addForm && (
-        <h3>
+        <p>
           Tracking of Books pages:
           {name && <span>{name}</span>}
-        </h3>
+        </p>
         )}
         {trackings.map(day => (
           <div key={day.id}>
@@ -141,7 +143,7 @@ class Trackings extends React.Component {
                   </div>
                   <div className="page_no">
                     <p>
-                      Page_no:
+                      Page read last time:
                     </p>
                     <p>{day.page_no}</p>
                   </div>              

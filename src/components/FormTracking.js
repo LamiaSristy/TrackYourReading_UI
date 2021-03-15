@@ -80,11 +80,11 @@ class FormDay extends React.Component {
 
     return (
       <div>
-        <h3>
+        <p>
           {actionToPerform}
           {' '}
           Tracking for Books
-        </h3>
+        </p>
         <form className="day">
 
           <div className="form-div">
