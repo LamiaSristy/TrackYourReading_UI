@@ -138,7 +138,7 @@ class FormBook extends React.Component {
               <textarea
                 id="pages"
                 name="pages"
-                defaultValue={buttonId === '0' ? pages : books[0].pages}
+                defaultValue={buttonId === '0' ? pages : book[0].pages}
                 onChange={this.handleChangePages}
               />
             </label>

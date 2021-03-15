@@ -1,6 +1,11 @@
 @import "https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
 
+h3 {
+  font-weight: 800;
+  color: #164663;
+}
+
 .main {
   padding-bottom: 10vh;
   font-family: 'Roboto', sans-serif;
@@ -52,11 +57,11 @@
   cursor: pointer;
 }
 
-.fa-trash-o {
-  color: red;
+.fa-minus-square  {
+  color: rgb(139, 58, 58);
 }
 
-.fa-pencil-square-o {
+.fa-pencil-square {
   color: black;
 }
 
@@ -65,8 +70,8 @@
 }
 
 .one-book .book-info {
-  width: 100%;
-  font-size: 4vw;
+  width: 90%;
+  font-size: 3vw;
   margin-bottom: 12px;
 }
 

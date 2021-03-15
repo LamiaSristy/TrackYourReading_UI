@@ -45,26 +45,43 @@ const userReducer = (state = initialState, action) => {
       };
     case LOGIN_USER:
       if (action.payload.user) {
-        return {
+        const newState = {
           isLogin: true,
           user: {
             username: action.payload.user.username,
             id: action.payload.user.id,
           },
+          errors: []
         };
+        localStorage.setItem('userState', JSON.stringify(newState));
+        return newState;
+        // return {
+        //   isLogin: true,
+        //   user: {
+        //     username: action.payload.user.username,
+        //     id: action.payload.user.id,
+        //   },
+        // };
       }
       return {
         isLogin: false,
         errors: action.payload.errors,
       };
     case LOGOUT_USER:
+      localStorage.removeItem('userState');
       return {
         isLogin: false,
         user: {},
         books: {},
       };
 
-    default: return state;
+    default: 
+      const savedState = JSON.parse(localStorage.getItem('userState'))
+      return savedState == null ? state : savedState;
+      // return {
+      //   //...state,
+      //   savedState
+      // };
   }
 };
 export default userReducer;

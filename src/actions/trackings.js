@@ -1,12 +1,12 @@
 import axios from 'axios';
-
+import { fetchReadingDaysUrl, createDayUrl, deleteDayUrl, updateDayUrl } from '../helpers/apiEndpoints';
 export const DISPLAY_FETCHED_DAYS = 'DISPLAY FETCHED DAYS';
 export const CREATE_DAY = 'CREATE DAY';
 export const DELETE_DAY = 'DELETE DAY';
 export const CREATE_DAY_ERROR = 'CREATE DAY ERROR';
 export const UPDATE_DAY = 'UPDATE DAY';
 
-export const fetchReadingDays = (userid, bookid) => dispatch => axios.get(`http://localhost:3000/users/${userid}/books/${bookid}/trackings`)
+export const fetchReadingDays = (userid, bookid) => dispatch => axios.get(fetchReadingDaysUrl(userid,bookid))
   .then(response => response.data)
   .then(data => {
     dispatch({
@@ -22,7 +22,7 @@ export const createDay = data => async dispatch => {
   try {
     const response = await axios({
       method: 'POST',
-      url: `http://localhost:3000/users/${data.user_id}/books/${data.book_id}/trackings `,
+      url: createDayUrl(data.user_id, data.book_id),
       data,
       crossdomain: true,
       withCredentials: true,
@@ -44,7 +44,7 @@ export const deleteDay = data => async dispatch => {
     dispatch({ type: DELETE_DAY, payload: data });
     const response = await axios({
       method: 'DELETE',
-      url: `http://localhost:3000/users/${data.user_id}/books/${data.book_id}/trackings/${data.id}`,
+      url: deleteDayUrl(data.user_id, data.book_id, data.id),
       data,
       crossdomain: true,
       withCredentials: true,
@@ -60,7 +60,7 @@ export const updateDay = data => async dispatch => {
     dispatch({ type: UPDATE_DAY, payload: data });
       const response = await axios({
       method: 'PATCH',
-      url: `http://localhost:3000/users/${data.user_id}/books/${data.book_id}/trackings/${data.id}`,
+      url: updateDayUrl(data.user_id, data.book_id, data.id),
       data,
       crossdomain: true,
       withCredentials: true,

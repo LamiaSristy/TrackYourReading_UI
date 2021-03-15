@@ -74,7 +74,7 @@ class Login extends React.Component {
             {errors ? this.handleErrors() : null}
           </ul>
         </div>
-        <h2>Log In</h2>
+        <h2>You need to LogIn or SignUp to continue.</h2>
         <form onSubmit={this.handleSubmit}>
           <input
             placeholder="Username"
@@ -91,11 +91,11 @@ class Login extends React.Component {
             onChange={this.handleChangePassword}
           />
           <button className="btn-login" placeholder="submit" type="submit">
-            Login
+            Log In
           </button>
-          <p>OR</p>
+          <p>Don't have account? Please Sign Up</p>
           <button type="button" className="btn-signup">
-            <Link to="/signup">Create an account</Link>
+            <Link to="/signup">Sign Up</Link>
           </button>
 
         </form>

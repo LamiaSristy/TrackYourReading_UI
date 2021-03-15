@@ -34,11 +34,11 @@ class Book extends React.Component {
     || editForm !== nextState.editForm;
   }
 
-  addBook = (name, genre, author, pages) => {
+  addBook = (name, author, genre, pages) => {
     const { createBook, user } = this.props;
     const { addForm } = this.state;
     const user_id = user.user.id;
-    createBook({ name,genre, author, pages, user_id });
+    createBook({ name, author, genre, pages, user_id });
     this.setState({
       addForm: !addForm,
     });
@@ -98,10 +98,10 @@ class Book extends React.Component {
                <div className="one-book">
                  <div className="buttons">
                    <button type="button" onClick={() => this.deleteBook(book.id)}>
-                     <i className="fa fa-trash-o" />
+                     <i className="fa fa-minus-square" />
                    </button>
                    <button type="button" onClick={this.displayEdit}>
-                     <i className="fa fa-pencil-square-o" id={book.id} />
+                     <i className="fa fa-pencil-square" id={book.id} />
                    </button>
                  </div>
                  <div className="book-info">

@@ -75,11 +75,11 @@
 }
 
 .buttons-form button:first-child {
-  background-color: rgb(173, 220, 145);
+  background-color: rgb(69, 114, 69);
 }
 
 .buttons-form button:last-child {
-  background-color: red;
+  background-color: rgb(139, 58, 58);
 }
 
 .new-ill {

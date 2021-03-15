@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+import { loginStatusUrl, createUserUrl, loginUserUrl, logOutUserUrl } from '../helpers/apiEndpoints';
 export const CREATE_USER = 'CREATE USER';
 export const CREATE_USER_ERROR = 'CREATE USER ERROR';
 export const LOGIN_USER = 'LOGIN USER';
@@ -9,22 +9,7 @@ export const LOGGED_IN = 'LOGGED IN';
 export const LOGGED_IN_ERROR = 'LOGGED_IN_ERROR';
 
 export const loginStatus = () => dispatch => {
-  axios.get('http://localhost:3000/logged_in',
-    { withCredentials: true })
-    .then(response => (
-      response.data))
-    .then(data => {
-      dispatch({
-        type: LOGGED_IN,
-        payload: data,
-      });
-    })
-    .catch(error => {
-      dispatch({
-        type: LOGGED_IN_ERROR,
-        payload: error,
-      });
-    });
+  return true;
 };
 
 export const createUser = newUser => async dispatch => {
@@ -32,7 +17,7 @@ export const createUser = newUser => async dispatch => {
   try {
     response = await axios({
       method: 'POST',
-      url: 'http://localhost:3000/users',
+      url: createUserUrl,
       data: { user: newUser },
       crossdomain: true,
       withCredentials: true,
@@ -54,7 +39,11 @@ export const createUser = newUser => async dispatch => {
 export const loginUser = user => async dispatch => {
   let response = {};
   try {
-    response = await axios.post('http://localhost:3000/login', { user }, { withCredentials: true });
+    response = await axios.post(loginUserUrl, { user }, { withCredentials: true,  
+      credentials: 'include',
+      headers: {'Access-Control-Allow-Origin': '*', 
+      'Content-Type': 'application/json', 
+      'Access-Control-Allow-Credentials': true} });
     dispatch({
       type: LOGIN_USER,
       payload: response.data,
@@ -74,7 +63,7 @@ export const logOutUser = () => async dispatch => {
     dispatch({ type: LOGOUT_USER, payload: {} });
     const response = await axios({
       method: 'DELETE',
-      url: 'http://localhost:3000/logout',
+      url: logOutUserUrl,
       data: { user: {} },
       crossdomain: true,
       withCredentials: true,

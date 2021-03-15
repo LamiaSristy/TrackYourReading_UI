@@ -1,12 +1,12 @@
 import axios from 'axios';
-
+import { fetchUserBookUrl, createBookUrl, updateBookUrl, deleteBookUrl } from '../helpers/apiEndpoints';
 export const DISPLAY_FETCHED_BOOK = 'DISPLAY FETCHED BOOK';
 export const CREATE_BOOK = 'CREATE BOOK';
 export const CREATE_BOOK_ERROR = 'CREATE BOOK ERROR';
 export const UPDATE_BOOK = 'UPDATE BOOK';
 export const DELETE_BOOK = 'DELETE BOOK';
 
-export const fetchUserBook = id => dispatch => axios.get(`http://localhost:3000/users/${id}/books`)
+export const fetchUserBook = id => dispatch => axios.get(fetchUserBookUrl(id))
   .then(response => response.data)
   .then(data => {
     dispatch({
@@ -22,7 +22,7 @@ export const createBook = data => async dispatch => {
     try {
       const response = await axios({
         method: 'POST',
-        url: `http://localhost:3000/users/${data.user_id}/books`,
+        url: createBookUrl(data.user_id),
         data,
         crossdomain: true,
         withCredentials: true,
@@ -45,7 +45,7 @@ export const updateBook = data => async dispatch => {
     dispatch({ type: UPDATE_BOOK, payload: data });
     const response = await axios({
       method: 'PATCH',
-      url: `http://localhost:3000/users/${data.user_id}/books/${data.id}`,
+      url: updateBookUrl(data.user_id, data.id),
       data,
       crossdomain: true,
       withCredentials: true,
@@ -61,7 +61,7 @@ export const deleteBook = data => async dispatch => {
     dispatch({ type: DELETE_BOOK, payload: data });
     const response = await axios({
       method: 'DELETE',
-      url: `http://localhost:3000/users/${data.user_id}/books/${data.id}`,
+      url: deleteBookUrl(data.user_id, data.id),
       data,
       crossdomain: true,
       withCredentials: true,

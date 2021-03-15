@@ -6,7 +6,7 @@ import {
   Route,
 } from 'react-router-dom';
 import { connect } from 'react-redux';
-import gandalf from '../assets/img/gandalf.png';
+import gandalf from '../assets/img/sign_in.png';
 import Header from './Header.js';
 import Login from '../containers/Login';
 import Signup from '../containers/Signup';
@@ -81,7 +81,7 @@ class App extends React.Component {
                 )
                   : (
                     <div className="login-access">
-                      <p>You need to login to access here</p>
+                      <p>You need to Sign In to access here</p>
                       <img src={gandalf} alt="gandalf" />
                     </div>
                   )
@@ -123,9 +123,9 @@ App.propTypes = {
 };
 
 App.defaultProps = {
-  isLogin: false,
-  loginStatus: () => {},
-  user: {},
+  // isLogin: false,
+  // loginStatus: () => {},
+  // user: {},
 };
 
 const mapStateToProps = state => ({

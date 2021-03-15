@@ -91,3 +91,7 @@
 .page_no p i {
   padding: 0 5px;
 }
+
+.fa-trash-o {
+  color: rgb(139, 58, 58);
+}

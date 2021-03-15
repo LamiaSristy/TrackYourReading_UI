@@ -134,9 +134,9 @@ class Trackings extends React.Component {
                     </p>
                     <div>
                       <button type="button" onClick={() => this.deleteTracking(day.id)}>
-                        <i className="fa fa-trash-o" />
+                        <i className="fa fa-trash" />
                       </button>
-                      <button type="button" onClick={this.displayEdit}><i className="fa fa-pencil-square-o" aria-label="pencil" id={day.id} /></button>
+                      <button type="button" onClick={this.displayEdit}><i className="fa fa-pencil-square" aria-label="pencil" id={day.id} /></button>
                     </div>
                   </div>
                   <div className="page_no">

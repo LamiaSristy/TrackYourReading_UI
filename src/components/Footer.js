@@ -23,7 +23,7 @@ const Footer = ({
 
   return (
     <nav className="menu">
-      <PathComponent path="main" icon="fa-bar-chart" linkText="Your Books" />
+      <PathComponent path="main" icon="fa-book" linkText=" " />
 
       {isLogin && match.path === '/books/:id' ? (
         <div className="icons icon-btn">
@@ -37,12 +37,12 @@ const Footer = ({
       { !isLogin
         && (
         <>
-          <PathComponent path="login" icon="fa-sign-in" linkText="Log In" />
-          <PathComponent path="signup" icon="fa-user-circle" linkText="Sign Up" />
+          <PathComponent path="login" icon="fa-sign-in" linkText="" />
+          <PathComponent path="signup" icon="fa-user" linkText="" />
         </>
         )}
       { isLogin && (
-      <PathComponent path="logout" icon="fa-sign-in" linkText="Log Out" handleClick={e => handleClick(e)} />
+      <PathComponent path="logout" icon="fa-sign-out" linkText="" handleClick={e => handleClick(e)} />
       )}
     </nav>
 

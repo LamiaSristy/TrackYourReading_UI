@@ -1,6 +1,11 @@
 @import "https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
 
+h2, 
+p {
+  color: #164663;
+}
+
 .body {
   background-color: #f7f8f9;
 }
@@ -33,7 +38,10 @@
 .login form input {
   margin: 10px 0;
   height: 28px;
-  width: 195px;
+  width: 238px;
+  border: 1px dotted #721c24;
+  border-radius: 5px;
+  padding-left: 10px;
 }
 
 .login form input::placeholder {
@@ -47,23 +55,23 @@
 
 .btn-login {
   border: none;
-  background-color: rgb(173, 220, 145);
+  background-color: rgb(69, 114, 69);
   height: 40px;
   padding: 0 20px;
   border-radius: 5px;
   color: white;
   font-weight: bold;
-  width: 110px;
+  width: 250px;
   cursor: pointer;
 }
 
 .btn-signup {
-  width: 110px;
+  width: 250px;
   height: 40px;
   padding: 3px 2px;
   font-weight: bold;
   border-radius: 5px;
-  background-color: #62b5e5;
+  background-color: #164663;
   border: none;
   cursor: pointer;
 }
