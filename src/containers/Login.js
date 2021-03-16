@@ -93,7 +93,7 @@ class Login extends React.Component {
           <button className="btn-login" placeholder="submit" type="submit">
             Log In
           </button>
-          <p>Don't have account? Please Sign Up</p>
+          <p>Do not have account? Please Sign Up</p>
           <button type="button" className="btn-signup">
             <Link to="/signup">Sign Up</Link>
           </button>

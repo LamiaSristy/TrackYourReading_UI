@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import React from 'react';
 import PropTypes from 'prop-types';
 import '../stylesheets/FormBook.css';
@@ -58,7 +59,9 @@ class FormBook extends React.Component {
   }
 
   handleUpdate = async id => {
-    const { name, author, genre, pages } = this.state;
+    const {
+      name, author, genre, pages,
+    } = this.state;
 
     const {
       user, updateBook, changeEditForm,
@@ -78,7 +81,9 @@ class FormBook extends React.Component {
   }
 
   render() {
-    const { name, author, genre, pages } = this.state;
+    const {
+      name, author, genre, pages,
+    } = this.state;
     const {
       actionToPerform, books, buttonId, changeEditForm, changeAddForm,
     } = this.props;
@@ -94,7 +99,7 @@ class FormBook extends React.Component {
           className="one-form"
           onSubmit={
            actionToPerform === 'Add'
-             ? () => this.handleSubmit(name, author, genre, pages) : () => this.handleUpdate(book[0].id)
+             ? () => this.handleSubmit(name, author, genre, pages) : () => this.handleUpdate(book[0].id) 
 }
         >
           <div className="one-parameter">
@@ -102,7 +107,7 @@ class FormBook extends React.Component {
               Name:
               <input
                 required
-                id="name"                
+                id="name"
                 name="name"
                 defaultValue={buttonId === '0' ? name : book[0].name}
                 onChange={this.handleChangeName}

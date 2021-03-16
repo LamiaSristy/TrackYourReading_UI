@@ -57,7 +57,7 @@ h3 {
   cursor: pointer;
 }
 
-.fa-minus-square  {
+.fa-minus-square {
   color: rgb(139, 58, 58);
 }
 
@@ -81,7 +81,7 @@ h3 {
 }
 
 .one-book .book-info a div {
-  display:flex;
+  display: flex;
 }
 
 .one-book .book-info p {
@@ -96,7 +96,7 @@ h3 {
 }
 
 .book-description {
-  width:70%;
+  width: 70%;
   align-items: flex-start;
 }
 
@@ -105,7 +105,6 @@ h3 {
   display: flex;
   flex-direction: column;
 }
-
 
 .tracking {
   display: flex;

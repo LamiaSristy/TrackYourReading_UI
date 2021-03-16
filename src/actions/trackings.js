@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import axios from 'axios';
 import { fetchReadingDaysUrl, createDayUrl, deleteDayUrl, updateDayUrl } from '../helpers/apiEndpoints';
 export const DISPLAY_FETCHED_DAYS = 'DISPLAY FETCHED DAYS';
@@ -6,7 +7,7 @@ export const DELETE_DAY = 'DELETE DAY';
 export const CREATE_DAY_ERROR = 'CREATE DAY ERROR';
 export const UPDATE_DAY = 'UPDATE DAY';
 
-export const fetchReadingDays = (userid, bookid) => dispatch => axios.get(fetchReadingDaysUrl(userid,bookid))
+export const fetchReadingDays = (userid, bookid) => dispatch => axios.get(fetchReadingDaysUrl(userid, bookid))
   .then(response => response.data)
   .then(data => {
     dispatch({
@@ -15,8 +16,8 @@ export const fetchReadingDays = (userid, bookid) => dispatch => axios.get(fetchR
     });
   })
   .catch(error => {
-  throw (error);
-});
+    throw (error);
+  });
 
 export const createDay = data => async dispatch => {
   try {
@@ -26,16 +27,16 @@ export const createDay = data => async dispatch => {
       data,
       crossdomain: true,
       withCredentials: true,
-      });
-      dispatch({
-        type: CREATE_DAY,
-        data: {
-          ...data,
-          id: response.data.id ? response.data.id : null,
-        },
     });
-    } catch (error) {
-      dispatch({ type: CREATE_DAY_ERROR, payload: error });
+    dispatch({
+      type: CREATE_DAY,
+      data: {
+        ...data,
+        id: response.data.id ? response.data.id : null,
+      },
+    });
+  } catch (error) {
+    dispatch({ type: CREATE_DAY_ERROR, payload: error });
   }
 };
 
@@ -50,7 +51,7 @@ export const deleteDay = data => async dispatch => {
       withCredentials: true,
     });
     return response;
-    } catch (error) {
+  } catch (error) {
     return (error);
   }
 };
@@ -58,7 +59,7 @@ export const deleteDay = data => async dispatch => {
 export const updateDay = data => async dispatch => {
   try {
     dispatch({ type: UPDATE_DAY, payload: data });
-      const response = await axios({
+    const response = await axios({
       method: 'PATCH',
       url: updateDayUrl(data.user_id, data.book_id, data.id),
       data,
@@ -66,7 +67,7 @@ export const updateDay = data => async dispatch => {
       withCredentials: true,
     });
     return response;
-    } catch (error) {
+  } catch (error) {
     return (error);
   }
 };

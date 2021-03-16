@@ -19,9 +19,9 @@ export default function trackingReducer(state = [], action) {
       objIndex = state.findIndex(obj => obj.id === action.payload.id);
 
       updateElement = {
-        ...state[objIndex],        
+        ...state[objIndex],
         date: action.payload.date,
-        page_no: action.payload.page_no,       
+        page_no: action.payload.page_no,
       };
       updatedState = [
         ...state.slice(0, objIndex),

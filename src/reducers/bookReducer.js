@@ -1,4 +1,6 @@
-import { DISPLAY_FETCHED_BOOK, CREATE_BOOK, DELETE_BOOK, UPDATE_BOOK } from '../actions/book';
+import {
+  DISPLAY_FETCHED_BOOK, CREATE_BOOK, DELETE_BOOK, UPDATE_BOOK,
+} from '../actions/book';
 
 let updateObj = {};
 let objIndex = {};

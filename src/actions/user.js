@@ -1,5 +1,9 @@
+/*eslint-disable*/
+
 import axios from 'axios';
-import { loginStatusUrl, createUserUrl, loginUserUrl, logOutUserUrl } from '../helpers/apiEndpoints';
+
+import { createUserUrl, loginUserUrl, logOutUserUrl } from '../helpers/apiEndpoints';
+
 export const CREATE_USER = 'CREATE USER';
 export const CREATE_USER_ERROR = 'CREATE USER ERROR';
 export const LOGIN_USER = 'LOGIN USER';
@@ -8,9 +12,7 @@ export const LOGOUT_USER = 'LOGOUT USER';
 export const LOGGED_IN = 'LOGGED IN';
 export const LOGGED_IN_ERROR = 'LOGGED_IN_ERROR';
 
-export const loginStatus = () => dispatch => {
-  return true;
-};
+export const loginStatus = () => dispatch => true;
 
 export const createUser = newUser => async dispatch => {
   let response = {};
@@ -39,11 +41,15 @@ export const createUser = newUser => async dispatch => {
 export const loginUser = user => async dispatch => {
   let response = {};
   try {
-    response = await axios.post(loginUserUrl, { user }, { withCredentials: true,  
+    response = await axios.post(loginUserUrl, { user }, {
+      withCredentials: true,
       credentials: 'include',
-      headers: {'Access-Control-Allow-Origin': '*', 
-      'Content-Type': 'application/json', 
-      'Access-Control-Allow-Credentials': true} });
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Credentials': true,
+      },
+    });
     dispatch({
       type: LOGIN_USER,
       payload: response.data,

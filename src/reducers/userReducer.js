@@ -1,3 +1,5 @@
+/*eslint-disable*/
+
 import {
   CREATE_USER, CREATE_USER_ERROR, LOGIN_USER,
   LOGOUT_USER, LOGGED_IN, LOGGED_IN_ERROR,
@@ -29,28 +31,18 @@ const userReducer = (state = initialState, action) => {
         user: {},
       };
 
-      case CREATE_USER:
-        const newState = {
-          isLogin: true,
-          user: {
-            id: action.payload.id,
-            username: action.payload.username,
-            password: action.payload.password,
-            passwordConfirmation: action.payload.passwordConfirmation,
-          },
-        };
-        localStorage.setItem('userState', JSON.stringify(newState));
-        return newState;
-    // case CREATE_USER:
-    //   return {
-    //     isLogin: true,
-    //     user: {
-    //       id: action.payload.id,
-    //       username: action.payload.username,
-    //       password: action.payload.password,
-    //       passwordConfirmation: action.payload.passwordConfirmation,
-    //     },
-    //   };
+    case CREATE_USER:
+      const newState = {
+        isLogin: true,
+        user: {
+          id: action.payload.id,
+          username: action.payload.username,
+          password: action.payload.password,
+          passwordConfirmation: action.payload.passwordConfirmation,
+        },
+      };
+      localStorage.setItem('userState', JSON.stringify(newState));
+      return newState;
     case CREATE_USER_ERROR:
       return {
         isLogin: false,
@@ -64,17 +56,10 @@ const userReducer = (state = initialState, action) => {
             username: action.payload.user.username,
             id: action.payload.user.id,
           },
-          errors: []
+          errors: [],
         };
         localStorage.setItem('userState', JSON.stringify(newState));
         return newState;
-        // return {
-        //   isLogin: true,
-        //   user: {
-        //     username: action.payload.user.username,
-        //     id: action.payload.user.id,
-        //   },
-        // };
       }
       return {
         isLogin: false,
@@ -88,13 +73,9 @@ const userReducer = (state = initialState, action) => {
         books: {},
       };
 
-    default: 
-      const savedState = JSON.parse(localStorage.getItem('userState'))
+    default:
+      const savedState = JSON.parse(localStorage.getItem('userState'));
       return savedState == null ? state : savedState;
-      // return {
-      //   //...state,
-      //   savedState
-      // };
   }
 };
 export default userReducer;

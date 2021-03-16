@@ -1,13 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
-import img_block from '../assets/img/sign_in.png';
-import Header from './Header.js';
+import eroorImg from '../assets/img/sign_in.png';
+import Header from './Header';
 import Login from '../containers/Login';
 import Signup from '../containers/Signup';
 import Book from '../containers/Book';
@@ -82,7 +78,7 @@ class App extends React.Component {
                   : (
                     <div className="login-access">
                       <p>You need to Sign In to access here</p>
-                      <img src={img_block} alt="img_block" />
+                      <img src={eroorImg} alt="eroorImg" />
                     </div>
                   )
               )}
@@ -101,7 +97,7 @@ class App extends React.Component {
                   : (
                     <div className="login-access">
                       <p>You need to login to access here</p>
-                      <img src={img_block} alt="img_block" />
+                      <img src={eroorImg} alt="eroorImg" />
                     </div>
                   )
               )}
@@ -113,13 +109,13 @@ class App extends React.Component {
   }
 }
 App.propTypes = {
-  isLogin: PropTypes.bool,
-  loginStatus: PropTypes.func,
+  isLogin: PropTypes.bool.isRequired,
+  loginStatus: PropTypes.func.isRequired,
   user: PropTypes.shape({
     id: PropTypes.number,
     password: PropTypes.string,
     username: PropTypes.string,
-  }),
+  }).isRequired,
 };
 
 App.defaultProps = {

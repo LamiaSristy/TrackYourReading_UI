@@ -47,7 +47,7 @@ class Trackings extends React.Component {
     const { createDay } = this.props;
     const book_id = ID;
     createDay({
-      book_id, date, page_no, user_id
+      book_id, date, page_no, user_id,
     });
   }
 
@@ -100,7 +100,7 @@ class Trackings extends React.Component {
   }
 
   render() {
-    const { addEdit, buttonId, addMore } = this.state;
+    const { addEdit, buttonId } = this.state;
     const { trackings, addForm } = this.props;
 
     const name = this.displayTracking();
@@ -146,7 +146,7 @@ class Trackings extends React.Component {
                       Page read last time:
                     </p>
                     <p>{day.page_no}</p>
-                  </div>              
+                  </div>
                 </div>
               </div>
             )}
@@ -193,8 +193,10 @@ Trackings.propTypes = {
     }),
   }),
   trackings: PropTypes.arrayOf(PropTypes.shape({
-    description: PropTypes.string,
     name: PropTypes.string,
+    author: PropTypes.string,
+    genre: PropTypes.string,
+    pages: PropTypes.integer,
   })),
   location: PropTypes.shape({
     state: PropTypes.shape({ bookname: PropTypes.string }),

@@ -38,7 +38,9 @@ class Book extends React.Component {
     const { createBook, user } = this.props;
     const { addForm } = this.state;
     const user_id = user.user.id;
-    createBook({ name, author, genre, pages, user_id });
+    createBook({
+      name, author, genre, pages, user_id,
+    });
     this.setState({
       addForm: !addForm,
     });
@@ -167,8 +169,10 @@ Book.propTypes = {
     }),
   }),
   book: PropTypes.arrayOf(PropTypes.shape({
-    description: PropTypes.string,
     name: PropTypes.string,
+    author: PropTypes.string,
+    genre: PropTypes.string,
+    pages: PropTypes.integer,
   })),
 };
 

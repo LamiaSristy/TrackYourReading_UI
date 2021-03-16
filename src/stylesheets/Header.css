@@ -4,7 +4,9 @@ header {
   flex-shrink: 0;
   display: flex;
   background: #164663;
-  font-family: 'Poppins', sans-serif;  
+  font-family:
+    'Poppins',
+    sans-serif;
   align-items: center;
   justify-content: center;
 }

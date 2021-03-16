@@ -10,7 +10,7 @@ class FormDay extends React.Component {
     super(props);
     this.state = {
       date: '2021-03-10',
-      page_no: 105
+      page_no: 105,
     };
   }
 
@@ -20,7 +20,7 @@ class FormDay extends React.Component {
       const track = trackings.filter(x => x.id.toString() === buttonId);
       this.setState({
         date: track[0].date,
-        page_no: track[0].page_no
+        page_no: track[0].page_no,
       });
     }
   }
@@ -37,11 +37,11 @@ class FormDay extends React.Component {
     });
   }
 
-  handleOptionChange= e => {
-    this.setState({
-      selectedOption: e.target.value,
-    });
-  }  
+  // handleOptionChange= e => {
+  //   this.setState({
+  //     selectedOption: e.target.value,
+  //   });
+  // }
 
   handleEdit = async (id, book_id) => {
     const {
@@ -55,7 +55,7 @@ class FormDay extends React.Component {
       user_id: user.user.id,
       book_id,
       date,
-      page_no      
+      page_no,
     };
 
     await updateDay(data);
@@ -64,7 +64,7 @@ class FormDay extends React.Component {
 
   handleSubmit(date, page_no) {
     const { addTracking, changeAddForm, user } = this.props;
-    const user_id = user.user.id;    
+    const user_id = user.user.id;
     addTracking(date, page_no, user_id);
     changeAddForm();
   }
@@ -114,7 +114,7 @@ class FormDay extends React.Component {
                   />
                 </label>
               </div>
-            </div>        
+            </div>
             <div className="buttons-form day-buttons">
               {actionToPerform === 'Add' && <button type="button" onClick={() => this.handleSubmit(date, page_no)}>{actionToPerform}</button>}
               {actionToPerform === 'Save Changes' && <button type="button" onClick={() => this.handleEdit(track[0].id, track[0].book_id)}>Save</button>}
