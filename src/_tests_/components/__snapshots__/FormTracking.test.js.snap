@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormTracking Component renders the day the page 1`] = `ShallowWrapper {}`;
+
+exports[`FormTracking Component renders the text of the buttons-form class 1`] = `ShallowWrapper {}`;
+
+exports[`FormTracking Component renders the text of the date-div class 1`] = `ShallowWrapper {}`;
+
+exports[`FormTracking Component renders the text of the date-div class 2`] = `ShallowWrapper {}`;
+
+exports[`FormTracking Component renders the text of the date-div class 3`] = `ShallowWrapper {}`;
+
+exports[`FormTracking Component renders the text of the date-track class 1`] = `ShallowWrapper {}`;
+
+exports[`FormTracking Component renders the text of the day-buttons class 1`] = `ShallowWrapper {}`;
+
+exports[`FormTracking Component renders the text of the one-parameter class 1`] = `ShallowWrapper {}`;
+
+exports[`FormTracking Component renders the text of the page_no-div class 1`] = `ShallowWrapper {}`;
+
+exports[`Testpage Component renders the form the page 1`] = `ShallowWrapper {}`;
+
+exports[`Testpage Component renders the text of the buttons-form class 1`] = `ShallowWrapper {}`;
+
+exports[`Testpage Component renders the text of the one-parameter class 1`] = `ShallowWrapper {}`;

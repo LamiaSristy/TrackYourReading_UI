@@ -81,13 +81,3 @@
 .buttons-form button:last-child {
   background-color: rgb(139, 58, 58);
 }
-
-.new-ill {
-  justify-content: center;
-  display: flex;
-}
-
-.newill div h3 {
-  margin: 20px;
-  font-size: 6vw;
-}

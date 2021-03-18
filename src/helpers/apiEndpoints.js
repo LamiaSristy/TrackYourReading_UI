@@ -1,8 +1,6 @@
 /*eslint-disable*/
 
 const baseUrl = 'http://localhost:3000';
-// For the Live api
-// const baseUrl = 'https://serene-inlet-93388.herokuapp.com';
 
 // User table's endpoint:
 export const loginStatusUrl = `${baseUrl}/logged_in`;

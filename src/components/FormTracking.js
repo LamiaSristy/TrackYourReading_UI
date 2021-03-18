@@ -37,12 +37,6 @@ class FormDay extends React.Component {
     });
   }
 
-  // handleOptionChange= e => {
-  //   this.setState({
-  //     selectedOption: e.target.value,
-  //   });
-  // }
-
   handleEdit = async (id, book_id) => {
     const {
       date, page_no,

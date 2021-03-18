@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Signup Container renders the signup class in the page 1`] = `ShallowWrapper {}`;
+
+exports[`Signup Container renders the text of the date class 1`] = `ShallowWrapper {}`;
+
+exports[`Signup Container renders the text of the day class 1`] = `ShallowWrapper {}`;
+
+exports[`Signup Container renders the text of the errors-div class 1`] = `ShallowWrapper {}`;
+
+exports[`Signup Container renders the text of the page_no class 1`] = `ShallowWrapper {}`;
+
+exports[`Signup Container renders the text of the trackings-buttons class 1`] = `ShallowWrapper {}`;
+
+exports[`Signup Container renders the text of the trackings-buttons class 2`] = `ShallowWrapper {}`;
+
+exports[`Signup Container renders the trackings class in the page 1`] = `ShallowWrapper {}`;

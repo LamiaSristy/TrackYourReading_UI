@@ -118,12 +118,6 @@ App.propTypes = {
   }).isRequired,
 };
 
-App.defaultProps = {
-  // isLogin: false,
-  // loginStatus: () => {},
-  // user: {},
-};
-
 const mapStateToProps = state => ({
   isLogin: state.user.isLogin,
   user: state.user,

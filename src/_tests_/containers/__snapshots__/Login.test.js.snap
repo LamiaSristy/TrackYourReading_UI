@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Container renders the body of the page 1`] = `ShallowWrapper {}`;
+
+exports[`Login Container renders the text of the btn-login class 1`] = `ShallowWrapper {}`;
+
+exports[`Login Container renders the text of the btn-signup class 1`] = `ShallowWrapper {}`;
+
+exports[`Login Container renders the text of the errors-div class 1`] = `ShallowWrapper {}`;
+
+exports[`Login Container renders the text of the login class 1`] = `ShallowWrapper {}`;
