@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component renders the title text of the Header Component 1`] = `
+<p>
+  Reading-Tracker
+</p>
+`;

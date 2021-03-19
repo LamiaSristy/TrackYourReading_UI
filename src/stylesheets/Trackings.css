@@ -1,0 +1,97 @@
+@import "https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+
+.trackings {
+  font-family: 'Roboto', sans-serif;
+}
+
+.trackings p {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  margin: 10px;
+  margin-bottom: 20px;
+}
+
+.trackings-buttons {
+  display: flex;
+  align-items: center;
+  top: 3px;
+  position: absolute;
+  width: 100%;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.add-day,
+.go-back {
+  color: white;
+  background: none;
+  border: none;
+}
+
+.add-day {
+  font-size: 5vw;
+  cursor: pointer;
+  padding-right: 10px;
+}
+
+.go-back {
+  font-size: 5vw;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.go-back a {
+  color: white;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.date p {
+  font-size: 4vw;
+  margin: 7px 0 0 13px;
+}
+
+.date p i {
+  padding-right: 5px;
+}
+
+.date div button {
+  border: none;
+  background: none;
+  font-size: 5.5vw;
+  padding: 0 3px;
+  cursor: pointer;
+}
+
+.page_no,
+.temp {
+  font-size: 3.7vw;
+  display: flex;
+  align-items: center;
+}
+
+.page_no p {
+  margin: 8px 0 5px 0;
+  padding-left: 6px;
+}
+
+.page_no p:first-child {
+  padding-left: 29px;
+}
+
+.page_no p:last-child {
+  font-size: 4.5vw;
+}
+
+.page_no p i {
+  padding: 0 5px;
+}
+
+.fa-trash-o {
+  color: rgb(139, 58, 58);
+}

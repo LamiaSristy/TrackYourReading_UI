@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Component renders the menu the page 1`] = `ShallowWrapper {}`;
+
+exports[`Footer Component renders the text of the add-trackings class 1`] = `ShallowWrapper {}`;
+
+exports[`Footer Component renders the text of the icon-btn class 1`] = `ShallowWrapper {}`;
+
+exports[`Footer Component renders the text of the icons class 1`] = `ShallowWrapper {}`;
+
+exports[`Testpage Component renders the form the page 1`] = `ShallowWrapper {}`;
+
+exports[`Testpage Component renders the menu the page 1`] = `ShallowWrapper {}`;
+
+exports[`Testpage Component renders the text of the add-trackings class 1`] = `ShallowWrapper {}`;
+
+exports[`Testpage Component renders the text of the buttons-form class 1`] = `ShallowWrapper {}`;
+
+exports[`Testpage Component renders the text of the icon-btn class 1`] = `ShallowWrapper {}`;
+
+exports[`Testpage Component renders the text of the icons class 1`] = `ShallowWrapper {}`;
+
+exports[`Testpage Component renders the text of the one-parameter class 1`] = `ShallowWrapper {}`;

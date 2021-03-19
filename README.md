@@ -1,33 +1,31 @@
 # Track Your Reading
 
-This project is the front-end part of a **Tracking app**, which developed using React. Here I have practiced the basics of React, like,
-- Props and States,
-- component,
-- Life-cycle methods, 
-- Hooks,
-- Routers,
-- Styling the React app,
-- Testing React components.
-- Redux-toolkit.
+The objective of this project was to create a mobile app, which can track any specific things and presented with a list of things to be measured. This app is using a back-end part, for the Back-End part, where I have created API and endpoints, I have used Rails.
+
+## Application Description:
+
+1. An user needs to Sign-up with a username and password.
+2. The username's length needs to be at least 4.
+3. The password's length needs to be at least 6.
+4. After Log-in/Sign-in the user is presented with the list of books.
+5. If the user is new, then they can add books by clicking the `+` sign in the header.
+6. While creating the books, the user has to enter a name, author, genre, and how many pages.
+7. After successful creation, the user can see the newly created book on the main page.
+8. To start tracking, the user needs to click on the book object.
+9. Then they will drag to create the tracking page, where they need to add the date and number of pages they are in.
+10. After clicking the button save, they have saved the page numbers.
 
 
 ## `Build-With:`
-- ([Theapi]())
 - React-virtual DOM concepts
 - VScode
 
 ## `Live Demo:`
 
-[TrackYourReading]()
+[Track-Your-Reading--App](https://trackreading.herokuapp.com/).
+ 
+[Back-End--Api](http://serene-inlet-93388.herokuapp.com/).
 
-
-## `Project presentations:`
-
-
-
-## `Screen-shots:`
-
-<img src="assets/images/Screenshot.png">
 
 # Getting Started:
 

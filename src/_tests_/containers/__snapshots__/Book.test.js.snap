@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Book Container renders the text of the add-book class 1`] = `ShallowWrapper {}`;
+
+exports[`Book Container renders the text of the book-description class 1`] = `ShallowWrapper {}`;
+
+exports[`Book Container renders the text of the book-info class 1`] = `ShallowWrapper {}`;
+
+exports[`Book Container renders the text of the book-name class 1`] = `ShallowWrapper {}`;
+
+exports[`Book Container renders the text of the books class 1`] = `ShallowWrapper {}`;
+
+exports[`Book Container renders the text of the buttons class 1`] = `ShallowWrapper {}`;
+
+exports[`Book Container renders the text of the one-book class 1`] = `ShallowWrapper {}`;
+
+exports[`Book Container renders the text of the tracking class 1`] = `ShallowWrapper {}`;
+
+exports[`Book Container renders the the page 1`] = `ShallowWrapper {}`;

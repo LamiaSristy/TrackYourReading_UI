@@ -1,0 +1,48 @@
+@import "https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+
+h2 {
+  color: #721c24;
+}
+
+.signup {
+  margin: 0 auto;
+}
+
+.signup h2 {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.signup form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.signup form input {
+  height: 28px;
+  width: 238px;
+  border: 1px dotted #721c24;
+  margin: 7px 0;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.signup form input::placeholder {
+  padding: 0 10px;
+}
+
+.signup form button {
+  height: 40px;
+  width: 250px;
+  border: none;
+  background-color: rgb(69, 114, 69);
+  padding: 0 20px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 20px 0;
+}
